@@ -1,0 +1,17 @@
+:root {
+    --main-color: #222;
+    --sub-color: rgb(228, 228, 228)
+}
+
+/*small screen*/
+@media (max-width: 768px) {
+    
+}
+/*medium screen*/
+@media (min-width: 992px) and (max-width: 1199px ) {
+    
+}
+/*lage screen*/
+@media (min-width: 1200px ) {
+    
+}

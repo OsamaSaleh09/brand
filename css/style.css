@@ -1,0 +1,749 @@
+* {
+    font-family: Cairo;
+}
+@font-face {
+    font-family: Cairo;
+    src:url(../fonts/Cairo.ttf)
+}
+body{ overflow: hidden; margin-top: 50px }
+:root { --sub-color: rgb(228, 228, 228)}
+h2,.h2 {
+    margin-bottom: 30px;
+    color: var(--sub-color);
+    text-transform: capitalize;
+    font-weight: bold;
+    letter-spacing: 1px
+}
+.overlay {
+    content: "";
+    width: 100%;
+    height: 100%;
+    z-index: 0
+}
+/*start option-box*/
+.option-box {
+    position: fixed;
+    top: 60px;
+    left: -120px;
+    z-index: 9999;
+    transition: all .7s ease-in-out;
+    direction: rtl;
+}
+.option-box .color-option {
+    float: left;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: var(--sub-color);
+    transition: all .7s ease-in
+}
+.option-box i {
+    font-size: 3rem;
+    color: var(--sub-color);
+    cursor: pointer;
+    margin-left: 5px;
+    margin-top: 70px;
+    transform: translatey(-50%)
+}
+.option-box .color-option ul li {
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.option-box .color-option ul li:nth-of-type(1){
+    margin-right: -5px;
+    margin-top: 13px;
+}
+.option-box .color-option ul li:nth-of-type(2){
+    margin-right: -23px;
+    margin-bottom: 2px
+}
+.option-box .color-option ul li:nth-of-type(3){
+    margin-right: -23px;
+    margin-top: 7px
+}
+.option-box .color-option ul li:nth-of-type(4){
+    margin-right: -5px;
+    margin-bottom: 13px
+}
+.left-option { left: -60px }
+.rotate {transform: rotate(360deg)}
+/*end option-box*/
+
+/*start navbar*/
+.navbar-inverse { border-color: transparent }
+.navbar .navbar-nav {
+    text-transform: capitalize;
+    color: var(--sub-color);
+    font-size: 1.5rem
+}
+.navbar-inverse .navbar-collapse {
+    border-color: var(--sub-color)
+}
+.navbar > .container .navbar-brand {
+    transition: all .3s ease-in;
+    color: var(--sub-color)
+}
+.navbar > .container .navbar-brand:hover {transform: scale(1.15)}
+.navbar-inverse .navbar-nav > .open > a,
+.navbar-inverse .navbar-nav > .open > a:hover,
+.navbar-inverse .navbar-nav > .open > a:focus,
+.navbar-inverse .navbar-nav > .active > a {
+    background-color: transparent;
+    transform: scale(1.15);
+}
+.navbar-inverse .navbar-nav > li {
+    padding: 15px 20px;
+}
+.navbar-inverse .navbar-nav > li > a {
+    transition: all .3s ease-in;
+    color: var(--sub-color);
+    padding: 0;
+    padding-bottom: 3px
+}
+.navbar-inverse .navbar-nav > li:hover > a {
+    transform: scale(1.15); 
+    border-bottom: 1px solid var(--sub-color)
+}
+.navbar-nav > li > .dropdown-menu {
+    border: none;
+    box-shadow: -1px -1px 10px  rgba(65, 65, 65, 0.801);
+    margin-top: 7px;
+    left: 10px;
+}
+.navbar-nav > li > .dropdown-menu::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 42%;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent  #fff transparent;
+}
+.dropdown-menu > li > a {transition: padding .3s ease-in; padding: 7px 20px}
+.dropdown-menu > li:hover > a {background-color: var(--sub-color); padding-left:27px}
+.active-brand {
+    transform: scale(1.15);
+    color: var(--sub-color);
+    border-bottom: 1px solid var(--sub-color)
+}
+.navbar-toggle {
+    border: none
+}
+/*end navbar*/
+/*start carousel*/
+.carousel-inner > .item {width: 100%; height: 100vh}
+.carousel-inner .item-mian::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index:3
+}
+.carousel-inner > .item img { width: 100%; height: 100% }
+.carousel-inner { z-index: 3 }
+.carousel-caption {
+    text-transform: capitalize;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-47%);
+    width: 70%;
+}
+.carousel-caption h1 { margin-bottom: 20px}
+.carousel-inner > .item img { width: 100%; height: 100%}
+.carousel-control.left,
+.carousel-control.right { z-index: 3 }
+/*end carousel*/
+/*about*/
+.about { padding: 50px 0 }
+.about h2 span { text-transform: capitalize }
+.about .lead {
+    width: 70%;
+    margin: auto;
+    text-transform: capitalize;
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--sub-color);
+}
+/*end about*/ 
+.line, .about-us hr {
+    width: 100%;
+    height: 1px;
+    border: none;
+    margin: 0 auto;
+    background-color: var(--sub-color)
+}
+/*start features*/
+.features { padding: 50px 0 70px;overflow: hidden }
+.features .row { margin-top: 60px }
+.feat span { font-size: 3em; color: var(--sub-color) }
+.feat h3 {
+    font-weight: 600;
+    color: var(--sub-color);
+    text-transform: capitalize;
+}
+.feat p { font-size: 16px; color: var(--sub-color)}
+/*end features*/
+/*start testimonials*/
+.testimonials {
+    background: url(../images/5.jpg) no-repeat center center fixed;
+    background-size: cover;
+    min-height: 400px;
+    width: 100%;
+    overflow: hidden
+}
+.testimonials h2 { margin-top: 70px}
+.testimonials .carousel-inner { height: 200px }
+.testimonials .lead {
+    line-height: 2em;
+    font-size: 1.2em;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 30px;
+    color: var(--sub-color);
+    text-transform: capitalize
+}
+.testimonials span {
+    padding-top: 30px;
+    font-weight: 600;
+    font-size: 1.6rem;
+    color: var(--sub-color)
+}
+.testimonials .carousel-indicators {
+    position: static;
+    margin-left: auto;
+    width: 100%;
+    padding-top: 30px;
+    margin-bottom: 40px;
+}
+.testimonials .carousel-indicators li {
+    width: 60px;
+    height: 60px;
+    text-indent: 0;
+    border-radius: 50%;
+    opacity: .6;
+    border: 2px solid var(--sub-color);
+    overflow: hidden;
+    margin: 0 5px;
+    transition: all .5s ease-in-out
+}
+.testimonials .carousel-indicators li.active {
+    opacity: 1;
+    transform: scale(1.2);
+    border: 2px solid var(--sub-color);
+}
+.testimonials .carousel-indicators li img {
+    max-height: 100%;
+    border-radius: 50%; 
+}
+/*end testimonials*/
+/*start price*/
+.price { padding: 70px 0}
+.price .row { margin-top: 70px;}
+.price .price-box {
+    background-color: var(--sub-color);
+    padding: 30px 10px 10px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    cursor: pointer;
+    border-radius: 10px
+}
+.price .price-box h3 {font-weight: 600; text-transform: capitalize}
+.price .price-box P {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 30px auto;
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+    line-height: 70px;
+    transition: all .7s ease
+}
+.price .price-box:hover p { transform: scale(1.1) rotateY(360deg)}
+.price .price-box ul { font-size: 18px; line-height: 2 }
+.price .price-box .btn {
+    color: var(--sub-color);
+    border: none;
+    margin: 20px 0;
+    transition: all .3s ease;
+    font-size: 1.2em;
+}
+/*end price*/
+/*start team*/
+.team {
+    width: 100%;
+    min-height: 580px;
+    background: url(../images/6.jpg) no-repeat center center fixed;
+    background-size: 100% 100%;
+    position: static;
+    z-index: -1
+}
+.team .container {
+    width: 70%;
+    padding: 50px 0;
+    z-index: 10
+}
+.team .row { margin-top: 70px; margin-bottom: 70px }
+.team .person {
+    margin-bottom: 40px;
+    cursor: pointer;
+    transition: all .5s ease;
+    backface-visibility: hidden
+}
+.team .person img {
+    width: 170px;
+    height: 170px;
+    filter: blur(1px)
+}
+.team .person h4 {
+    margin-top: 20px;
+    color: var(--sub-color);
+    font-weight: 600
+}
+.team .person p { color: var(--sub-color)}
+.team .person i {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 3px;
+    font-size: 16px;
+    color: var(--sub-color);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .5s ease
+}
+.team .person:hover { transform: scale(1.1)}
+.team .person:hover img { filter: blur(0px)}
+.team .person:hover i:nth-of-type(1) {
+    background-color: #3b5998
+}
+.team .person:hover i:nth-of-type(2) {
+    background-color: #1da1f2
+}
+.team .person:hover i:nth-of-type(3) {
+    background-color: #0072b1
+}
+.team .person:hover i:nth-of-type(4) {
+    background-color: #ff0000
+}
+
+/*end team*/
+
+/*start subscribe*/
+.subscribe { padding: 50px 0 90px }
+.subscribe p {
+    margin-top: 40px;
+    color: var(--sub-color);
+    text-transform: capitalize;
+    font-size: 18px;
+}
+.subscribe .form-inline {width: 100%;margin-top: 50px }
+.subscribe .form-control {
+    width: 400px;
+    margin-right: -5px;
+    border-radius: 5px 0 0 5px;
+    padding: 20px 20px;
+    font-size: 18px;
+    text-transform: capitalize;
+    border: none
+}
+.subscribe .btn {
+    width: 150px;
+    border-radius: 0 5px 5px 0;
+    padding: 7px  20px 6px;
+    font-size: 18px;
+    color: var(--sub-color);
+    text-transform: capitalize;
+    transition: all .5s ease-in-out
+}
+.subscribe .btn i { margin-right: 10px}
+/*end subscribe*/
+/*start statistics */
+.statistics {
+    background: url(../images/8.jpg) no-repeat center center fixed;
+    background-size: cover;
+    min-height: 400px;
+    position: relative;
+    overflow: hidden
+}
+.statistics .overlay { position: static }
+.statistics h2 { margin: 70px 0 90px }
+.statistics .statis {margin-bottom: 70px}
+.statistics .statis i { color: var(--sub-color)}
+.statistics .statis p {
+    font-size: 40px;
+    color: var(--sub-color);
+    font-weight: 600;
+    margin-bottom: 0
+}
+.statistics .statis span {
+    font-size: 2rem;
+    color: var(--sub-color);
+    text-transform: capitalize
+}
+/*end statistics */
+/* start skills */
+.skills { padding: 60px 0}
+.skills h2 { margin-bottom: 30px }
+.skills h5 {
+    color: var(--sub-color);
+    padding-left: 5px;
+    margin-top: 15px;
+    text-transform: capitalize;
+}
+.progress {
+    height: 10px;
+    font-size: 5px;
+    line-height: 10px;
+    font-weight: bold
+}
+.pro-back {
+    width: 80%;
+    height: 10px;
+    margin-right: 10px
+}
+.skills h3 {
+    color:  var(--sub-color);
+    text-transform: capitalize
+}
+.skills .lead {
+    line-height: 2em;
+    font-size: 16px;
+    color: var(--sub-color);
+    text-transform: capitalize;
+    margin-top: 15px;
+    text-indent: 30px;
+}
+.skills .skills-info .btn ,.ceo .btn{
+    margin-top: 10px;
+    color: var(--sub-color);
+    border: none;
+    transition: all .5s ease;
+    padding: 7px 15px;
+    text-transform: capitalize
+}
+/* end skills */
+/* start contact */
+.contact {
+    background: url(../images/10.jpg) no-repeat;
+    background-size: 100% 100%;
+    min-height: 550px;
+    color: var(--sub-color);
+}
+.contact .overlay { padding: 70px 0 90px }
+.contact .lead {
+    text-transform: capitalize;
+    margin-top: 20px;
+    margin-bottom: 70px;
+}
+.contact ::-webkit-input-placeholder{text-transform: capitalize }
+.contact input[type="number"]::-webkit-inner-spin-button,
+.contact input[type="number"]::-webkit-outer-spin-button{
+    -webkit-appearance: none; margin: 0 }
+.contact textarea {height: 84px; resize: none }
+.contact input,
+.contact textarea {
+    border: none;
+    color: var(--sub-color);
+    text-transform: capitalize;
+    caret-color: var(--sub-color);
+    opacity: .8;
+}
+.contact input:focus,
+.contact textarea:focus {
+    transform: scale(1.01,1.02);
+    opacity: 1
+}
+.contact .btn {
+    border: none;
+    transition: all .5s ease;
+    text-transform: capitalize;
+    padding: 7px;
+    color:var(--sub-color)
+}
+.contact .btn:hover { opacity: 1 }
+/* end contact */
+/* start clients */
+.clinets { padding: 30px 0 }
+.clinets ul li img {
+    height: 30px;
+    padding: 0 20px;
+    opacity: .6;
+    cursor: pointer;
+    transition: all 1s;
+}
+.clinets .container { width: 70% }
+.clinets ul li img:hover { opacity: 1 }
+/* end clients */
+/* start footer */
+footer {
+    padding: 10px 0;
+    color: var(--sub-color);
+    text-transform: capitalize
+}
+footer h3 { margin: 50px 0 30px;text-transform: capitalize }
+footer .list { overflow: hidden }
+footer .list li{
+    text-transform: capitalize;
+    width: 33.333%;
+    float: left;
+    padding-bottom: 10px
+}
+footer .icon { margin-top: 30px }
+footer .icon li {
+    float: left;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin-right: 10px;
+    font-size: 20px;
+    color: var(--sub-color);
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+footer .icon li a {
+    color: white
+}
+footer .icon li:nth-of-type(1):hover {
+    background-color: #3b5998
+}
+footer .icon li:nth-of-type(2):hover {
+    background-color: #0a66c2
+}
+footer .icon li:nth-of-type(3):hover {
+    background-color: #333
+}
+.media { margin-top: 5px }
+.media .media-object {
+    width: 80px;
+    height: 60px;
+    margin-top: 5px;
+}
+.media h4 { margin: 0 0 10px 5px }
+.media p { margin: 0 0 0 5px }
+footer .img-thumbnail {
+    width: 49%;
+    float: left;
+    margin-bottom: 2%;
+    background-color: transparent
+}
+footer .img-thumbnail:nth-of-type(1),
+footer .img-thumbnail:nth-of-type(3) {
+    margin-right: 2%
+}
+footer .footer {
+    width: 100%;
+    padding: 50px 0 0 0;
+    text-align: center;
+    font-size: 20px;
+    text-transform: capitalize
+}
+footer .footer span { text-transform: uppercase }
+/* end footer */
+/* start loading */
+.loading {
+    position: relative;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    height: 110vh;
+    background-color: #222;
+    z-index: 999999
+}
+.loading-child {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-100%);
+    color: var(--sub-color)
+}
+.loading-child span {
+    font-size: 5rem;
+    letter-spacing: 3px;
+    font-weight: bold;
+    text-transform: uppercase;
+    z-index: 1;
+    line-height: 1;
+    mix-blend-mode: difference;
+    padding: 0 10px
+}
+.loading-child::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100%;
+    background-color: var(--sub-color);
+    z-index: -1;
+    border-radius: 10px;
+    animation: move 3s linear infinite
+}
+@keyframes move {
+    0% , 100% {
+        left: 0
+    }
+    50% {
+        left: calc(100% - 100px)
+    }
+}
+/* end loading */
+/* start to top */
+.to-top {
+    position:fixed !important;
+    bottom: 10px;
+    right: 15px;
+    z-index: 9998;
+    text-align: center;
+    line-height: 3.78;
+    cursor: pointer;
+    display: none
+}
+.to-top i {
+    font-size: 3rem;
+    color: var(--sub-color);
+}
+/* end to top */
+
+/*mobile screen*/
+@media (max-width: 767px) {
+    .navbar-inverse .navbar-nav > .open > a,
+    .navbar-inverse .navbar-nav > .open > a:hover,
+    .navbar-inverse .navbar-nav > .open > a:focus,
+    .navbar-inverse .navbar-nav > .active > a {
+        transform: scale(1);
+        color: var(--sub-color)
+    }
+    .navbar-inverse .navbar-nav > li:hover > a {
+        transform: scale(1)
+    }
+    .navbar-nav > li > .dropdown-menu::before {
+        border-color: transparent
+    }
+    .carousel-caption {
+        transform: translate(-50%,-55%);
+    }
+    .subscribe .form-control {
+        width: 90%;
+        margin: 0 5%  ;
+        border-radius: 5px;
+        padding: 20px 20px;
+        font-size: 1.5rem;
+        border: none;
+    }
+    .subscribe .btn {
+        margin-top: 20px;
+        width: 150px;
+        border-radius: 5px;
+        padding: 7px 0;
+        font-size: 1.5rem
+    }
+    .skills .skills-info .btn {margin-left: 50%}
+    .skills {padding: 30px 0}
+    .clinets ul li img {padding: 2px 0}
+    .testimonials {min-height: 550px}
+    .testimonials .carousel-inner {height: 330px}
+    .navbar-fixed-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse {
+        max-height: none;
+    }
+    /*start option-box*/
+    .option-box {
+        top: 420px
+    }
+    .navbar-inverse .navbar-nav > li:hover > a {
+        transform: scale(1)
+    }
+    .active-brand {
+        transform: scale(1)
+    }
+    .navbar-nav > li > .dropdown-menu li {
+        font-size: 1.5rem;
+        padding: 4px 0;
+    }
+    .dropdown-menu > li:hover > a {background-color: transparent}
+  
+}
+/*small screen*/
+@media (min-width: 768px) and (max-width: 991px ) {
+    .testimonials { min-height: 500px}
+    .testimonials .carousel-inner { height: 280px}
+}
+
+/*start about*/
+.about {
+    font-size: 1.9rem
+}
+.about-us {
+    color: var(--sub-color);
+    padding: 10px 0;
+}
+.about-us p {
+    padding-top: 30px
+}
+.about-us img {
+    width: 60%;
+    height: 400px;
+}
+.about-features {
+    padding: 20px 0;
+    color: var(--sub-color);
+}
+.about-features h3 {
+    text-transform: capitalize
+}
+.about-features p {
+    padding-bottom: 30px;
+}
+.ceo img {
+    width: 400px;
+    height: 100%
+}
+.ceo h3,.ceo p  {
+    text-transform: capitalize;
+    padding: 15px 0 15px 15px;
+    color: var(--sub-color)
+}
+.ceo p {
+    font-size: 1.6rem;
+}
+.ceo .btn {
+    margin-left: 15px;
+    display: inline-block
+}
+/*end about*/
+/*start faq*/
+.faq hr {
+    width: 50%;
+}
+.faq p {
+    color: var(--sub-color);
+    padding: 30px
+}
+.tabs {
+    text-transform: capitalize;
+}
+.tabs .panel-heading a::after {
+    font-family: "Glyphicons Halflings";
+    content: "\e114";
+    float: right;
+    color: var(--sub-color)
+}
+.tabs .panel-heading a.collapsed::after{
+    font-family: "Glyphicons Halflings";
+    content: "\e080";
+    float: right;
+    color: var(--sub-color)
+}
+.panel-group .panel-heading {
+    color: var(--sub-color)
+}
+.panel-body {
+    color: var(--sub-color)
+}
+/*end faq*/
