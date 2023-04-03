@@ -134,7 +134,7 @@ h2,.h2 {
 }
 /*end navbar*/
 /*start carousel*/
-.carousel-inner > .item {width: 100%; height: 100vh}
+.carousel-inner > .item {width: 100%; height: calc(100vh - 60px)}
 .carousel-inner .item-mian::before {
     content: "";
     width: 100%;
